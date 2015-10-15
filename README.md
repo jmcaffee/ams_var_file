@@ -1,7 +1,7 @@
 # AmsVarFile
 
 AmsVarFile generates DPM and DSM variable declaration files and provides for
-adding and deleting variables programatically.
+adding and deleting variables programmatically.
 
 ## Installation
 
@@ -48,7 +48,7 @@ To generate a `DSM` var file:
 AmsVarFile::File.generate("dsm", "path/to/dsms.gdl")
 ```
 
-AmsVarFile will throw an IOError exception if the file already exists.
+AmsVarFile will throw an `IOError` exception if the file already exists.
 
 The generated files will contain markers that allow AmsVarFile to understand
 where to insert/delete variables. Removing or modifying these markers will
@@ -64,7 +64,7 @@ The markers are:
 
     // END INITS
 
-The naming convention of the files is `dpms.gdl` for DPMs
+The naming convention of the files are `dpms.gdl` for DPMs
 and `dsms.gdl` for DSMs.
 
 ### Adding Variable Declarations
@@ -93,7 +93,7 @@ var_type = "text"
 var_id = "myDummyVar"
 
 
-# var_alias is the variables actual name in the AMS system. It *can*
+# var_alias is the variable's actual name in the AMS system. It *can*
 # contain spaces and such.
 
 var_alias = "My Dummy Var"
@@ -111,8 +111,8 @@ Adding a `DSM` variable is virtually the same, except a different method
 is called:
 
 ```ruby
-var_type = "text"
-var_id = "myDummyDSMVar"
+var_type  = "text"
+var_id    = "myDummyDSMVar"
 var_alias = "My Dummy DSM Var"
 file_path = "path/to/dsms.gdl"
 
@@ -175,6 +175,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/jmcaff
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-See [LICENSE](https://github.com/jmcaffee/ams_var_file/blob/master/LICENSE) for
+See [LICENSE.txt](https://github.com/jmcaffee/ams_var_file/blob/master/LICENSE.txt) for
 details.
 
